@@ -298,6 +298,18 @@ namespace Unidux.SceneTransition
                     };
                 }
             }
+
+            public IDictionary<SamplePage, SampleScene> ActiveSceneMap
+            {
+                get
+                {
+                    return new Dictionary<SamplePage, SampleScene>()
+                    {
+                        {SamplePage.Page1, SampleScene.Scene1 },
+                        {SamplePage.Page2, SampleScene.Scene2 },
+                    };
+                }
+            }
         }
 
         class SampleReducer : PageDuck<SamplePage, SampleScene>.Reducer
